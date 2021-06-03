@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head.ejs') %>
+<body>
+    <%- include('./partial/navbarTeacher.ejs') %>
+    <div>
+        <a href="/subject/add"><h1>ADD</h1></a>
+    </div>
+    <div>
+        <h1>Subjects</h1>
+    <table border>
+        <tr>
+          <th>Subject Name</th>
+        </tr>
+        <% data.Subjects.forEach(el => { %>
+        <tr>
+            <td><%= el.subjectName %></td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+</body>
+</html>

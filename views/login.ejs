@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head.ejs') %>
+<body>
+    <div>
+        <form>
+            <label>Username</label><br>
+            <input type="text" name="username"><br><br>
+            <label >Password</label><br>
+            <input type="password" name="password"><br><br>
+            <input type="submit" value="Teacher" formaction="/login/teacher" formmethod="POST">
+            <input type="submit" value="Student" formaction="/login/student" formmethod="POST">
+            <input type="submit" value="Add Student" formaction="/login/add" formmethod="GET">
+        </form>
+    </div>
+</body>
+</html>

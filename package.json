@@ -1,0 +1,30 @@
+{
+  "name": "pair_project-phase-1-",
+  "version": "1.0.0",
+  "description": "pair project fase 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bramfunnf/pair_project-phase-1-.git"
+  },
+  "author": "Abraham Adiputra Wijaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bramfunnf/pair_project-phase-1-/issues"
+  },
+  "homepage": "https://github.com/bramfunnf/pair_project-phase-1-#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "ejs": "^3.1.6",
+    "emailjs-com": "^2.6.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "session": "^0.1.0"
+  }
+}

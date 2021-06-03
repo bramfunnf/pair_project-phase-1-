@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bimbel Online</title>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("user_C516sOUpkUSIpCCHTNSbH");
+        })();
+        </script>
+        <script type="text/javascript">
+                window.onload = function() {
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        emailjs.sendForm('service_wqk1reg', 'template_d5fwxme', this)
+                            .then(function() {
+                                console.log('SUCCESS!');
+                            }, function(error) {
+                                console.log('FAILED...', error);
+                            });
+                    });
+                }
+        </script>
+    </head>
+<body>
+    <%- include('./partial/navbarTeacher.ejs') %>
+    <div>
+        <h2>Subjects</h2>
+    <table border>
+        <tr>
+          <th>Subject Name</th>
+          <th>Date</th>
+          <th>link</th>
+          <th>Limit Student</th>
+          <th>Action</th>
+        </tr>
+        <% data[0].Subjects.forEach(el => { %>
+        <tr>
+            <td><%= el.subjectName %></td>
+            <td><%= el.Schedule.date %></td>
+            <td><%= el.Schedule.link %></td>
+            <td><%= el.Schedule.student_limit %></td>
+            <td>
+                <form id="contact-form">
+                    <input type="submit"  value="Send Email">
+                </form>
+            </td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+</body>
+</html>

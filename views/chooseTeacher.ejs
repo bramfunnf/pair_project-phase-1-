@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head.ejs') %>
+<body>
+    <%- include('./partial/navbarStudent.ejs') %>
+    <div>
+        <h1>Teacher</h1>
+    <table border>
+        <tr>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+        <% data.Teachers.forEach(el => { %>
+        <tr>
+            <td><%= el.name %></td>
+            <td>
+                <a href=<%= `/schedule/subjectStudent/${data.SubjectId}/${el.id}` %>>choose teacher</a>
+            </td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+</body>
+</html>
